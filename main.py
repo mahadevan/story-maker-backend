@@ -82,7 +82,8 @@ app = FastAPI(title="Story Maker API") # Updated title
 origins = [
     "http://localhost:5173",  # Vue dev server
     "https://*.onrender.com", # Render preview deployments wildcard
-    "https://<YOUR_GITHUB_USERNAME>.github.io", # <<< IMPORTANT: Replace this placeholder later!
+    "https://mahadevan.github.io", # Your live GitHub Pages URL (origin only)
+    "https://mahadevan.github.io/story-maker-frontend", # Your live GitHub Pages URL (full path, might be needed depending on requests)
     # Add your production frontend URL here later
 ]
 
