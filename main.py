@@ -103,6 +103,7 @@ async def root():
 
 @app.post("/generate-treatment", response_model=TreatmentOutput)
 async def create_treatment(plot_input: PlotInput):
+    logger.info("--- Entered /generate-treatment endpoint ---")
     # The endpoint now relies on the globally initialized (or None) model via generate_treatment
     logger.info(f"Received request to generate treatment for plot: '{plot_input.plot[:50]}...'") # Log start of request
     treatment = await generate_treatment(plot_input.plot)
