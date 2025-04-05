@@ -47,7 +47,7 @@ async def generate_treatment(plot_text: str) -> str:
          logger.warning("Generate treatment called with empty plot text.")
          raise HTTPException(status_code=400, detail="Plot cannot be empty")
 
-    prompt = f"""Expand the following story plot into a detailed story in just 250 words. Focus on outlining key scenes, character arcs, and potential turning points.
+    prompt = f"""Using the following plot idea, write a complete short story of up to 350 words. The story should have a clear beginning, middle, and end, with vivid scenes, meaningful character development, and at least one emotional or narrative turning point.
 
 Plot:
 {plot_text}
